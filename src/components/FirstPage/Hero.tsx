@@ -14,17 +14,17 @@ const Hero = () => {
                 <h2 className='text-3xl text-[--primary-color] font-extrabold font-outline-2 cursor-default'>معرفی مناسبترین مراکز درمانی و خدماتی</h2>
             </div>
             <div className="flex gap-5 justify-between items-center ">
-                <Link to={'callSec'} spy={true} smooth={true} offset={-100} duration={600} className="hover:p-2 border-4 border-[--second-primary-color] rounded-md my-auto cursor-pointer ease-in-out duration-500">
+                <Link to={'callSec'} spy={true} smooth={true} offset={-100} duration={600} className="hover:p-2 border-2 border-[--second-primary-color] rounded-md my-auto cursor-pointer ease-in-out duration-500">
                     <div className="rounded-md bg-[--third-primary-color] px-7 py-8 ">
                         <h2 className='text-[--second-primary-color] text-2xl'>تماس سریع با مشاور دامپزشک</h2>
                     </div>
                 </Link>
-                <div className="hover:p-2 border-4 border-[--second-primary-color] rounded-md my-auto cursor-pointer ease-in-out duration-500">
+                <div className="hover:p-2 border-2 border-[--second-primary-color] rounded-md my-auto cursor-pointer ease-in-out duration-500">
                     <div className="rounded-md bg-[--third-primary-color] px-7 py-8 ">
                         <h2 className='text-[--second-primary-color] text-2xl'>تشخیص با کمک هوش مصنوعی</h2>
                     </div>
                 </div>
-                <div className="hover:p-2 border-4 border-[--second-primary-color] rounded-md my-auto cursor-pointer ease-in-out duration-500">
+                <div className="hover:p-2 border-2 border-[--second-primary-color] rounded-md my-auto cursor-pointer ease-in-out duration-500">
                     <div className="rounded-md bg-[--third-primary-color] px-7 py-8 ">
                         <h2 className='text-[--second-primary-color] text-2xl'>تماس تصویری با مشاور دامپزشک</h2>
                     </div>

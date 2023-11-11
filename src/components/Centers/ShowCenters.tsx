@@ -41,7 +41,7 @@ function ShowCenters({ data }: CenterDataType) {
     return (
         <>
             <section className={`flex flex-col mt-14 gap-2 ${modal && 'blur-md'}`}>
-                <div className="flex border-4 border-[--second-primary-color] rounded-md w-2/5 p-1">
+                <div className="flex border-2 border-[--second-primary-color] rounded-md w-2/5 p-1">
                     <div className="flex w-full gap-1">
                         <input onChange={(e) => { setSearch(e.target.value) }} type="text" className='w-full text-sm text-center bg-[--third-primary-color] py-1 rounded-md outline-none' placeholder='جست و جو مراکز درمانی و خدماتی' />
                         <div className="bg-[--third-primary-color] p-2 rounded-md">
@@ -49,12 +49,12 @@ function ShowCenters({ data }: CenterDataType) {
                         </div>
                     </div>
                 </div>
-                <div className={`flex border-4 border-[--second-primary-color] rounded-md p-2 `}>
+                <div className={`flex border-2 border-[--second-primary-color] rounded-md p-2 `}>
                     <div className="flex flex-col w-full gap-1 ">
                         <div className="bg-[--third-primary-color] px-4 py-2 rounded-md">
-                            <h2 className="text-2xl cursor-default">لیست مراکز درمانی/ لیست مراکز خدماتی</h2>
+                            <h2 className="text-xl cursor-default">لیست مراکز درمانی/ لیست مراکز خدماتی</h2>
                         </div>
-                        <div className="grid gap-3 grid-cols-5 bg-[--third-primary-color] p-4 rounded-md relative">
+                        <div className="grid gap-5 grid-cols-5 bg-[--third-primary-color] p-4 rounded-md relative">
                             {centerDatas ?
                                 centerDatas
                                     .filter((center: any) => {
@@ -65,16 +65,16 @@ function ShowCenters({ data }: CenterDataType) {
 
                                     .map((center: any, key: number) => {
                                         return (
-                                            <div key={key} onClick={() => NavigatHandler(center.medicalCenterId)} className="flex flex-col gap-2 border-4 border-[--second-primary-color] rounded-md p-2 cursor-pointer">
+                                            <div key={key} onClick={() => NavigatHandler(center.medicalCenterId)} className="flex flex-col gap-2 border-2 border-[--second-primary-color] rounded-md p-2 cursor-pointer hover:-translate-y-3">
                                                 <div className="hidden">{center.medicalCenterId}</div>
-                                                <div className="w-full flex justify-center py-5 bg-[--fifth-primary-color] rounded-md min-h-[120px]">
+                                                <div className="w-full flex justify-center py-4 bg-[--fifth-primary-color] rounded-md min-h-[160px]">
                                                     {center.medicalCenterMeta.image?.sourceUrl ?
                                                         <Image src={center.medicalCenterMeta.image.sourceUrl} alt='image' decoding='async' width={120} height={100} quality={100} />
                                                         :
                                                         <Location size="120" color="#ffefcd" />}
                                                 </div>
                                                 <div className="w-full flex justify-center bg-[--fifth-primary-color] rounded-md py-2">
-                                                    <h3 className='text-white text-xl'>{center.title}</h3>
+                                                    <h4 className='text-white text-lg'>{center.title}</h4>
                                                 </div>
                                             </div>
                                         )

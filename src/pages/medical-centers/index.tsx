@@ -8,8 +8,7 @@ interface datasType {
 }
 
 export default function MedicalCeters({ data }: datasType) {
-  // const centerDetail = (await GetData()).props.centerDetail
-
+console.log(data);
 
   return (
     <main className='px-10'>
@@ -44,7 +43,6 @@ export async function getStaticProps() {
   return {
     props: {
       data,
-      // centerDetail: centerDetail.medicalCenters.nodes,
     }
   };
 

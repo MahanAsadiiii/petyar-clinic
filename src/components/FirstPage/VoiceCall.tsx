@@ -27,7 +27,7 @@ const VoiceCall = () => {
   return (
     <section className='mt-20 h-screen relative' id='callSec'>
       <div className={`flex items-end justify-evenly relative ${modal && 'blur-md opacity-50'}`}>
-        <div className="w-1/2 p-3 border-4 border-[--second-primary-color] rounded-md">
+        <div className="w-1/2 p-3 border-2 border-[--second-primary-color] rounded-md">
           <div className="bg-[--third-primary-color] rounded-md">
             <p className='p-5 text-justify cursor-default'>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
@@ -48,7 +48,7 @@ const VoiceCall = () => {
         </div>
         <div className="w-[15%] flex">
           <Image alt={'Icon2'} src={icon2} height={430} className='absolute top-0 left-36 opacity-40'></Image>
-          <div className="flex w-full group hover:p-2 border-4 border-[--second-primary-color] p-0 rounded-md cursor-pointer ease-in-out duration-500">
+          <div className="flex w-full group hover:p-2 border-2 border-[--second-primary-color] p-0 rounded-md cursor-pointer ease-in-out duration-500">
             <button onClick={() => rullAccept()} className='text-lg bg-[--third-primary-color] rounded-md w-full py-5'>
               شرایط را قبول دارم
             </button>
@@ -57,7 +57,7 @@ const VoiceCall = () => {
       </div>
       {modal &&
         <div className="flex absolute top-1/4 justify-center w-full">
-          <div className="flex justify-around border-4 border-[--second-primary-color] rounded-md w-1/2 p-3 ">
+          <div className="flex justify-around border-2 border-[--second-primary-color] rounded-md w-1/2 p-3 ">
             <div className="flex flex-col items-end gap-5 bg-[--third-primary-color] rounded-md p-5">
               <CloseSquare onClick={() => closeHandler()} size="26" color="#ffffff" className='cursor-pointer'/>
               <p className=' text-justify cursor-default'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده

@@ -27,43 +27,52 @@ body {
 @layer base {
   .font-outline-2 {
     -webkit-text-stroke: 1px #ffefcd;
-    font-family: Lalezar-regular
+    /* font-family: Lalezar-regular */
   }
 
   .font-outline-4 {
     -webkit-text-stroke: 2px #ffefcd;
-    font-family: Lalezar-regular
+    /* font-family: Lalezar-regular */
   }
 }
-h1{
+
+h1 {
   font-family: estedad-ExtraBold;
 }
-h2,button{
+
+h2,
+button {
   font-family: estedad-bold;
 }
+
 h3 {
   font-family: Estedad-SemiBold;
 }
-h4,p,input{
+
+h4,
+p,
+input {
   font-family: estedad-medium;
 }
 
-input::placeholder{
+input::placeholder {
   color: #ffefcd;
 }
 
-.type-container{
+.type-container {
   animation: opening 1s ease-in-out;
 }
 
 @keyframes opening {
-  0%{
+  0% {
     width: 0;
   }
-  70%{
+
+  70% {
     width: 50px;
   }
-  100%{
+
+  100% {
     max-width: fit-content;
   }
 }
@@ -71,13 +80,14 @@ input::placeholder{
 .typing-text {
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 1s ;
+  animation: typing 1s;
 }
 
 @keyframes typing {
   0% {
     width: 0;
   }
+
   100% {
     width: 90%;
   }

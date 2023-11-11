@@ -23,7 +23,6 @@ interface MedicalCenterType {
 interface detailtype {
     Id: number | undefined
     onClose: any
-    // data : any
 }
 
 
@@ -68,14 +67,12 @@ const Modal = ({ Id, onClose }: detailtype) => {
     }, [Id]); // Run the effect when Id changes
 
 
-    console.log({ data });
-
     return (
         <div className="flex border-4 border-[--second-primary-color] rounded-md p-3">
             {data ?
                 <div className="flex flex-col w-full gap-2 justify-evenly ">
                     <div className="flex gap-2">
-                        <div className="w-full flex items-center bg-[--third-primary-color] pr-3 rounded-md">
+                        <div className="w-full flex  items-center bg-[--third-primary-color] pr-5 rounded-md">
                             <h2 className='text-xl cursor-default'>{data.title}</h2>
                         </div>
                         <div className="bg-[--third-primary-color] p-2 rounded-md">
