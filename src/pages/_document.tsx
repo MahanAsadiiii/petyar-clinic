@@ -1,12 +1,13 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html dir='rtl'>
       <Head />
-      <body>
-        <Main />
-        <NextScript />
+      <body className='flex-col max-w-[1920px] mx-auto pt-5'>
+          <Main />
+          <NextScript />
       </body>
     </Html>
   )

@@ -1,0 +1,81 @@
+:root{
+    /* --font-medium: '../../public/fonts/Lalezar.woff';
+    --font-regular: '../../public/fonts/Lalezar.woff2'; */
+    --font-black: '../../public/fonts/Estedad-Black.woff2';
+    --font-bold: '../../public/fonts/Estedad-Bold.woff2';
+    --font-extraBold: '../../public/fonts/Estedad-ExtraBold.woff2';
+    --font-extraLight: '../../public/fonts/Estedad-ExtraLight.woff2';
+    --font-light: '../../public/fonts/Estedad-Light.woff2';
+    --font-medium: '../../public/fonts/Estedad-Medium.woff2';
+    --font-regular: '../../public/fonts/Estedad-Regular.woff2';
+    --font-semiBold: '../../public/fonts/Estedad-SemiBold.woff2';
+    --font-thin: '../../public/fonts/Estedad-Thin.woff2';
+}
+
+/* @font-face {
+    font-family: 'Lalezar-medium';
+    src: url('../../public/fonts/Lalezar.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Lalezar-regular';
+    src: url('../../public/fonts/Lalezar.woff2') format('woff2');
+    font-weight: 600;
+} */
+
+
+
+@font-face {
+    font-family: 'Estedad-Black';
+    src: url('../../public/fonts/Estedad-Black.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Estedad-Bold';
+    src: url('../../public/fonts/Estedad-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Estedad-ExtraBold';
+    src: url('../../public/fonts/Estedad-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Estedad-ExtraLight';
+    src: url('../../public/fonts/Estedad-ExtraLight.woff2') format('woff2');
+    font-weight: 200; 
+  }
+  
+  @font-face {
+    font-family: 'Estedad-Light';
+    src: url('../../public/fonts/Estedad-Light.woff2') format('woff2');
+    font-weight: 300; 
+  }
+  
+  @font-face {
+    font-family: 'Estedad-Medium';
+    src: url('../../public/fonts/Estedad-Medium.woff2') format('woff2');
+    font-weight: 500; 
+  }
+  
+  @font-face {
+    font-family: 'Estedad-Regular';
+    src: url('../../public/fonts/Estedad-Regular.woff2') format('woff2');
+    font-weight: 400; 
+  }
+  
+  @font-face {
+    font-family: 'Estedad-SemiBold';
+    src: url('../../public/fonts/Estedad-SemiBold.woff2') format('woff2');
+    font-weight: 600; 
+  }
+  
+  @font-face {
+    font-family: 'Estedad-Thin';
+    src: url('../../public/fonts/Estedad-Thin.woff2') format('woff2');
+    font-weight: 100; 
+  }

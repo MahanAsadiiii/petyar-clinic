@@ -1,0 +1,8 @@
+query Get_centersDATA {
+  medicalCenters {
+    nodes {
+      title
+      medicalCenterId
+    }
+  }
+}
