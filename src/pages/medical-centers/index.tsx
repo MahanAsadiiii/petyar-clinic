@@ -1,24 +1,25 @@
 import React from 'react'
-import { ShowCenters , Header } from "@/components/index";
+import { ShowMedicalCenters , Header } from "@/components/index";
 import client from '@/lib/apollo-client'
 import { gql} from '@apollo/client'
 
-interface datasType {
-  data: any
+interface fetchedDatasType {
+  centersData: any
 }
 
-export default function MedicalCeters({ data }: datasType) {
-console.log(data);
+export default function MedicalCeters({ centersData }: fetchedDatasType) {
+
 
   return (
     <main className='px-10'>
       <Header/>
-      <ShowCenters data={data} />
+      <ShowMedicalCenters medicalCenters={centersData} />
     </main>
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
+
   const Get_centersDATA = gql`
   {
     medicalCenters {
@@ -37,13 +38,14 @@ export async function getStaticProps() {
 
   const { data } = await client.query({
     query: Get_centersDATA,
+    fetchPolicy: 'no-cache'
   });
 
 
   return {
     props: {
-      data,
-    }
+      centersData : data.medicalCenters.nodes,
+    },
   };
 
 }
