@@ -50,7 +50,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
                 <div className={`flex border-2 border-[--second-primary-color] rounded-md p-2 `}>
                     <div className="flex flex-col w-full gap-1 ">
                         <div className="bg-[--third-primary-color] px-4 py-2 rounded-md">
-                            <h2 className="text-xl cursor-default text-[--second-primary-color]">لیست مراکز درمانی/ لیست مراکز خدماتی</h2>
+                            <h2 className="text-xl cursor-default text-[--second-primary-color]">لیست مراکز درمانی</h2>
                         </div>
                         <div className="grid gap-5 grid-cols-5 bg-[--third-primary-color] p-5 rounded-md relative">
                             {medicalCenters ?

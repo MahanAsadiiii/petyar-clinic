@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import { Home2, CallCalling, Video, Location, Android, Profile } from 'iconsax-react'
 import {Link} from "react-scroll"
-import NextLink from 'next/link';
 
 
 const Header = () => {
@@ -19,28 +18,28 @@ const Header = () => {
     return (
         <nav className={`${fix && 'fixed shadow-2xl right-0 bg-[#6c562c] py-4 top-0 z-10 rounded-b-lg'} px-10 w-full items-center flex justify-between `}>
             <div className="flex gap-3 ">
-                <NextLink href='/' className="flex items-center gap-2 group ease-in-out duration-500">
+                <Link to={'heroSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
                     <Home2 size="32" color="#ffefcd" className='cursor-pointer' />
                     <div className="type-container hidden group-hover:block ">
-                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>نخست</h3>
+                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>ابتدای صفحه</h3>
                     </div>
-                </NextLink>
+                </Link>
                 <Link to={'callSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
                     <CallCalling size="32" color="#ffefcd" className='cursor-pointer' />
                     <div className="type-container hidden group-hover:block ">
                         <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>تماس تلفنی</h3>
                     </div>
                 </Link>
-                <Link to={'callSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
-                    <Video size="32" color="#ffefcd" className='cursor-pointer' />
-                    <div className="type-container hidden group-hover:block ">
-                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>تماس تصویری</h3>
-                    </div>
-                </Link>
                 <Link to={'centerSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
                     <Location size="32" color="#ffefcd" className='cursor-pointer' />
                     <div className="type-container hidden group-hover:block ">
                         <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>مراکز درمانی</h3>
+                    </div>
+                </Link>
+                <Link to={'videoSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
+                    <Video size="32" color="#ffefcd" className='cursor-pointer' />
+                    <div className="type-container hidden group-hover:block ">
+                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>تماس تصویری</h3>
                     </div>
                 </Link>
                 <div className="flex items-center gap-2 group ease-in-out duration-500">

@@ -27,12 +27,10 @@ body {
 @layer base {
   .font-outline-2 {
     -webkit-text-stroke: 1px #ffefcd;
-    /* font-family: Lalezar-regular */
   }
 
   .font-outline-4 {
     -webkit-text-stroke: 2px #ffefcd;
-    /* font-family: Lalezar-regular */
   }
 }
 
@@ -60,7 +58,7 @@ input::placeholder {
 }
 
 .type-container {
-  animation: opening 1s ease-in-out;
+  animation: opening 0.5s ease-in-out;
 }
 
 @keyframes opening {
@@ -69,7 +67,7 @@ input::placeholder {
   }
 
   70% {
-    width: 50px;
+    width: 70px;
   }
 
   100% {
@@ -80,7 +78,7 @@ input::placeholder {
 .typing-text {
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 1s;
+  animation: typing 0.7s;
 }
 
 @keyframes typing {

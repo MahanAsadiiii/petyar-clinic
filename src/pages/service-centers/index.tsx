@@ -1,5 +1,5 @@
 import React from 'react'
-import { ShowServiceCenters, Header } from "@/components/index";
+import { ShowServiceCenters, MainHeader } from "@/components/index";
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
@@ -12,7 +12,7 @@ export default function serviceCenters({ centersData2 }: fetchedDatasType) {
 
     return (
         <main className='px-10'>
-            <Header />
+            <MainHeader />
             <ShowServiceCenters serviceCenters={centersData2} />
         </main>
     )
