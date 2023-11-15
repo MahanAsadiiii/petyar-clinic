@@ -6,7 +6,7 @@ import { icon3, icon4 } from '@/utilities/Index'
 const CentersRoute = () => {
     return (
         <section className='flex justify-evenly items-center relative h-screen' id='centerSec'>
-                <Link href={'/medical-centers'} className="flex flex-col w-3/12 h-full justify-center">
+                <Link href={'/medical-centers'} className="flex flex-col w-3/12 h-full justify-center" shallow={true}>
                     <Image alt='icon' src={icon3} width={400} height={400} className='top-0 opacity-50 basis-1/2 -z-20 absolute'/>
                     <div className="felx border-2 border-[--second-primary-color] hover:p-3 rounded-md cursor-pointer ease-in-out duration-500 ">
                         <button className='text-xl bg-[--third-primary-color] rounded-md py-8 w-full'>
@@ -14,7 +14,7 @@ const CentersRoute = () => {
                         </button>
                     </div>
                 </Link>
-                <Link href={'/service-centers'} className="flex flex-col w-3/12 h-full justify-center">
+                <Link href={'/service-centers'} className="flex flex-col w-3/12 h-full justify-center" shallow={true}>
                     <Image alt='icon' src={icon4} className='absolute opacity-50 -z-20 top-16'/>
                     <div className="flex border-2 border-[--second-primary-color] hover:p-3 rounded-md cursor-pointer ease-in-out duration-500 ">
                         <button className='text-xl bg-[--third-primary-color] rounded-md py-8 w-full'>
