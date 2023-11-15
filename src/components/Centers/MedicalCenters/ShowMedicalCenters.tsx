@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import { SearchNormal1, Location } from 'iconsax-react'
 import { MedicalCenterModal } from '@/components/index'
 import Image from 'next/image'
@@ -14,6 +14,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
     const [id, setId] = useState<number>()
     const [modal, setModal] = useState<boolean>(false);
     const [centerSelect, setCenterSelect] = useState<number>()
+    const medCenter = useMemo(() => medicalCenters , [medicalCenters]);
 
     useEffect(() => {
         setId(id)

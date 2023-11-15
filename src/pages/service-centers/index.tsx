@@ -19,7 +19,7 @@ export default function serviceCenters({ centersData2 }: fetchedDatasType) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const Get_serviceCentersDATA = gql`
     {

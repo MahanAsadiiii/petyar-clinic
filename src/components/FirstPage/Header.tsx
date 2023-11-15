@@ -21,7 +21,7 @@ const Header = () => {
                 <Link to={'heroSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
                     <Home2 size="32" color="#ffefcd" className='cursor-pointer' />
                     <div className="type-container hidden group-hover:block ">
-                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>ابتدای صفحه</h3>
+                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>نخست</h3>
                     </div>
                 </Link>
                 <Link to={'callSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
@@ -33,7 +33,7 @@ const Header = () => {
                 <Link to={'centerSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
                     <Location size="32" color="#ffefcd" className='cursor-pointer' />
                     <div className="type-container hidden group-hover:block ">
-                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>مراکز درمانی</h3>
+                        <h3 className={`typing-text cursor-pointer ${fix ? 'text-[--second-primary-color]' : 'text-[--fourth-primary-color]'} `}>مراکز</h3>
                     </div>
                 </Link>
                 <Link to={'videoSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">

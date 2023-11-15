@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useMemo } from 'react'
 import { SearchNormal1, Location } from 'iconsax-react'
 import { ServiceCenterModal } from '@/components/index'
 import Image from 'next/image'
@@ -15,6 +15,7 @@ function ShowServiceCenters({ serviceCenters }: CenterDataType) {
     const [modal, setModal] = useState<boolean>(false);
     const [centerSelect, setCenterSelect] = useState<number>()
 
+    const servCenter = useMemo(() => serviceCenters , [serviceCenters]);
 
     useEffect(() => {
         setId(id)
@@ -55,8 +56,8 @@ function ShowServiceCenters({ serviceCenters }: CenterDataType) {
                             <h2 className="text-xl cursor-default text-[--second-primary-color]"> لیست مراکز خدماتی</h2>
                         </div>
                         <div className="grid gap-5 grid-cols-5 bg-[--third-primary-color] p-5 rounded-md relative">
-                            {serviceCenters ?
-                                serviceCenters
+                            {servCenter ?
+                                servCenter
                                     .filter((center: any) => {
                                         return search.toLowerCase() === ''
                                             ? center.node
