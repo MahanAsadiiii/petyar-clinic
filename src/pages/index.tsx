@@ -23,7 +23,7 @@ export default function Home({Voice_content,Video_content}: datasType) {
 
 
 
-export async function getInitialProps() {
+export async function getServerSideProps() {
 
   const VoiceCall_termsAndRules = gql`
 {

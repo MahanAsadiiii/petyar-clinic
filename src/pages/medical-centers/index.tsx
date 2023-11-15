@@ -18,7 +18,7 @@ export default function MedicalCeters({ centersData }: fetchedDatasType) {
   )
 }
 
-export async function getInitialProps() {
+export async function getServerSideProps() {
 
   const Get_centersDATA = gql`
   {
