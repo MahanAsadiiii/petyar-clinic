@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, VoiceCall, CentersRoute, Header,VideoCall } from "../components/index";
+import { Hero, VoiceCall, CentersRoute, Header,VideoCall,GauidenceRouter } from "../components/index";
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
@@ -17,6 +17,7 @@ export default function Home({Voice_content,Video_content}: datasType) {
       <VoiceCall voiceCallRulesAndTerms={Voice_content} />
       <CentersRoute />
       <VideoCall videoCallRullesAndTerms={Video_content}/>
+      <GauidenceRouter/>
     </main>
   )
 }

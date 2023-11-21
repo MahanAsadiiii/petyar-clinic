@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { SearchNormal1, Location } from 'iconsax-react'
-import { MedicalCenterModal } from '@/components/index'
+// import { MedicalCenterModal } from '@/components/index'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 interface CenterDataType {
@@ -14,7 +15,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
     const [id, setId] = useState<number>()
     const [modal, setModal] = useState<boolean>(false);
     const [centerSelect, setCenterSelect] = useState<number>()
-    const medCenter = useMemo(() => medicalCenters , [medicalCenters]);
+    const medCenter = useMemo(() => medicalCenters, [medicalCenters]);
 
     useEffect(() => {
         setId(id)
@@ -25,7 +26,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
         setCenterSelect(CenterID)
         setModal(true)
     }
-    useEffect(() => {        
+    useEffect(() => {
         document.addEventListener('keydown', closeHandler);
 
         return () => {
@@ -64,7 +65,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
 
                                     .map((center: any, key: number) => {
                                         return (
-                                            <div key={key} onClick={() => NavigatHandler(center.medicalCenterId)} className="flex flex-col gap-2 border-2 border-[--second-primary-color] rounded-md p-2 cursor-pointer hover:-translate-y-3">
+                                            <Link href={`/medical-centers/${center.slug}`} key={key} onClick={() => NavigatHandler(center.medicalCenterId)} className="flex flex-col gap-2 border-2 border-[--second-primary-color] rounded-md p-2 cursor-pointer hover:-translate-y-3">
                                                 <div className="hidden">{center.medicalCenterId}</div>
                                                 <div className="w-full flex justify-center py-4 bg-[--fifth-primary-color] rounded-md min-h-[160px]">
                                                     {center.medicalCenterMeta.image?.sourceUrl ?
@@ -75,7 +76,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
                                                 <div className="w-full flex justify-center bg-[--fifth-primary-color] rounded-md py-2">
                                                     <h4 className='text-white text-lg'>{center.title}</h4>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         )
                                     })
                                 : null
@@ -84,11 +85,11 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
                     </div>
                 </div>
             </section>
-            {modal &&
+            {/* {modal &&
                 <div className={`${modal && ' w-4/5 block absolute top-28 left-32 bg-[--primary-color] rounded-md'}`}>
                     <MedicalCenterModal Id={centerSelect} onClose={closeHandler} />
                 </div>
-            }
+            } */}
         </>
     )
 }

@@ -26,6 +26,7 @@ export async function getServerSideProps() {
       nodes {
         medicalCenterId
         title
+        slug
         medicalCenterMeta {
           image {
             sourceUrl

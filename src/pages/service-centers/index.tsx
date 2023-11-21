@@ -27,6 +27,7 @@ export async function getServerSideProps() {
             edges {
               node {
                 title
+                slug
                 serviceCenterId
                 serviceCenterMeta {
                   image {
