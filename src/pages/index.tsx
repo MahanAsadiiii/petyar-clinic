@@ -15,9 +15,9 @@ export default function Home({Voice_content,Video_content}: datasType) {
       <Header />
       <Hero />
       <VoiceCall voiceCallRulesAndTerms={Voice_content} />
+      <GauidenceRouter/>
       <CentersRoute />
       <VideoCall videoCallRullesAndTerms={Video_content}/>
-      <GauidenceRouter/>
     </main>
   )
 }

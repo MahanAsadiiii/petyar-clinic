@@ -10,6 +10,7 @@
   --third-primary-color: #6c562ca9;
   --fourth-primary-color: #eea040;
   --fifth-primary-color: #b87e32;
+  --sixth-primary-color: #8e6931;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -49,9 +50,11 @@ h3 {
 
 h4,
 p,
-input {
+input,
+label {
   font-family: estedad-medium;
 }
+
 
 input::placeholder {
   color: #ffefcd;
@@ -90,3 +93,9 @@ input::placeholder {
     width: 90%;
   }
 }
+
+/* #input-form {
+  background: url('/public/Assets/Icons/icon9.png') no-repeat center;
+  width: max-content;
+  height: max-content;
+} */
