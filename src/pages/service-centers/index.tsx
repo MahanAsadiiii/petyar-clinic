@@ -11,7 +11,7 @@ interface fetchedDatasType {
 export default function serviceCenters({ centersData2 }: fetchedDatasType) {
 
     return (
-        <main className='px-10'>
+        <main className='mx-5 lg:mx-10'>
             <MainHeader />
             <ShowServiceCenters serviceCenters={centersData2} />
         </main>

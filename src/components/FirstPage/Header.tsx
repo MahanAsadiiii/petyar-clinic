@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <nav className={`${fix && 'fixed shadow-2xl right-0 bg-[#6c562c] py-4 top-0 z-10 rounded-b-lg'} px-10 w-full items-center flex justify-between `}>
-            <div className="flex gap-3 ">
+            <div className=" hidden md:flex gap-3">
                 <Link to={'heroSec'} spy={true} smooth={true} offset={-100} duration={600} className="flex items-center gap-2 group ease-in-out duration-500">
                     <Home2 size="32" color="#ffefcd" className='cursor-pointer' />
                     <div className="type-container hidden group-hover:block ">

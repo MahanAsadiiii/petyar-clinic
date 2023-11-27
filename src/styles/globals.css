@@ -69,9 +69,9 @@ input::placeholder {
     width: 0;
   }
 
-  70% {
+  /* 70% {
     width: 40px;
-  }
+  } */
 
   100% {
     max-width: fit-content;

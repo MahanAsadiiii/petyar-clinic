@@ -40,8 +40,8 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
 
     return (
         <>
-            <section className={`flex flex-col mt-14 gap-2 ${modal && 'blur-md'}`}>
-                <div className="flex border-2 border-[--second-primary-color] rounded-md w-2/5 p-1">
+            <section className={`flex flex-col mt-14 gap-4 lg:gap-2 ${modal && 'blur-md'}`}>
+                <div className="flex border-2 border-[--second-primary-color] rounded-md w-4/5 lg:w-2/5 p-1">
                     <div className="flex w-full gap-1">
                         <input onChange={(e) => { setSearch(e.target.value) }} type="text" className='w-full text-sm text-center bg-[--third-primary-color] py-1 rounded-md outline-none' placeholder='جست و جو مراکز درمانی و خدماتی' />
                         <div className="bg-[--third-primary-color] p-2 rounded-md">
@@ -54,7 +54,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
                         <div className="bg-[--third-primary-color] px-4 py-2 rounded-md">
                             <h2 className="text-xl cursor-default text-[--second-primary-color]">لیست مراکز درمانی</h2>
                         </div>
-                        <div className="grid gap-5 grid-cols-5 bg-[--third-primary-color] p-5 rounded-md relative">
+                        <div className="grid gap-5 grid-cols-1 lg:grid-cols-5 bg-[--third-primary-color] p-5 rounded-md relative">
                             {medicalCenters ?
                                 medicalCenters
                                     .filter((center: any) => {

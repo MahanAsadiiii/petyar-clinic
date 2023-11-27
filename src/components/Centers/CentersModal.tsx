@@ -62,7 +62,7 @@ const CenterModal = ({ MedicalCenterData, ServiceCenterData }: proptype) => {
                                 </div>
                                 <div className="flex gap-3 items-baseline">
                                     <h3 className='text-xl'>توضیحات:</h3>
-                                    <h4 className='text-base'>
+                                    <h4 className='text-base text-justify pl-2 leading-8'>
                                         {MedicalCenterData ? MedicalCenterData.medicalCenterMeta.desc : ServiceCenterData.serviceCenterMeta.desc}
                                     </h4>
                                 </div>

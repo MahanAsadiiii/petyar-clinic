@@ -14,7 +14,7 @@ const Modal = ({closeHandler}: propType) => {
     return (
         <div className=' w-screen fixed top-0 left-0 h-screen flex items-center z-10 bg-[#bdbdbdc9]' onClick={closeHandler}>
             <div className="flex justify-center w-full">
-                <div className="flex justify-around bg-[--primary-color] border-2 border-[--second-primary-color] rounded-md w-1/2 p-3 shadow-2xl shadow-black" onClick={(e) => { e.stopPropagation() }}>
+                <div className="flex justify-around bg-[--primary-color] border-2 border-[--second-primary-color] rounded-md lg:w-1/2 p-3 shadow-2xl shadow-black" onClick={(e) => { e.stopPropagation() }}>
                     <div className="flex flex-col items-end gap-2 ">
                         <div className="bg-[--third-primary-color] rounded-md p-3 flex w-full justify-end">
                             <CloseSquare onClick={closeHandler} size="38" color="#ffffff" className='cursor-pointer' />
