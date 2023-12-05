@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, VoiceCall, CentersRoute, Header, VideoCall, GauidenceRouter } from '../components/index';
+import { Hero, VoiceCall, CentersRoute, Header, VideoCall, GauidenceRouter, Layout } from '../components/index';
 import client from '@/lib/apollo-client';
 import { gql } from '@apollo/client';
 
@@ -10,14 +10,16 @@ interface datasType {
 
 export default function Home({ Voice_content, Video_content }: datasType) {
   return (
-    <main className='flex flex-col gap-20 lg:gap-0 mx-5 lg:mx-0'>
-      <Header />
-      <Hero />
-      <VoiceCall voiceCallRulesAndTerms={Voice_content} />
-      <VideoCall videoCallRullesAndTerms={Video_content} />
-      <GauidenceRouter />
-      <CentersRoute />
-    </main>
+    <Layout>
+      <main className='flex flex-col gap-20 lg:gap-0 mx-5 lg:mx-0'>
+        <Header />
+        <Hero />
+        <VoiceCall voiceCallRulesAndTerms={Voice_content} />
+        <VideoCall videoCallRullesAndTerms={Video_content} />
+        <GauidenceRouter />
+        <CentersRoute />
+      </main>
+    </Layout>
   );
 }
 
@@ -45,12 +47,12 @@ export async function getServerSideProps() {
 
   const { data: voiceCall } = await client.query({
     query: VoiceCall_termsAndRules,
-    fetchPolicy:'no-cache'
+    fetchPolicy: 'no-cache'
   });
 
   const { data: videoCall } = await client.query({
     query: VideoCall_termsAndRules,
-    fetchPolicy:'no-cache'
+    fetchPolicy: 'no-cache'
   });
 
   return {

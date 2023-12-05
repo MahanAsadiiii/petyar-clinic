@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { SearchNormal1, Location } from 'iconsax-react'
-// import { MedicalCenterModal } from '@/components/index'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,6 +9,7 @@ interface CenterDataType {
 }
 
 function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
+
 
     const [search, setSearch] = useState<string>('');
     const [id, setId] = useState<number>()
@@ -21,11 +21,11 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
         setId(id)
     }, [id])
 
-
     function NavigatHandler(CenterID: number) {
         setCenterSelect(CenterID)
         setModal(true)
     }
+
     useEffect(() => {
         document.addEventListener('keydown', closeHandler);
 
@@ -54,7 +54,7 @@ function ShowMedicalCenters({ medicalCenters }: CenterDataType) {
                         <div className="bg-[--third-primary-color] px-4 py-2 rounded-md">
                             <h2 className="text-xl cursor-default text-[--second-primary-color]">لیست مراکز درمانی</h2>
                         </div>
-                        <div className="grid gap-5 grid-cols-1 lg:grid-cols-5 bg-[--third-primary-color] p-5 rounded-md relative">
+                        <div className={`grid gap-5 grid-cols-1 lg:grid-cols-5 bg-[--third-primary-color] p-5 rounded-md relative`}>
                             {medicalCenters ?
                                 medicalCenters
                                     .filter((center: any) => {

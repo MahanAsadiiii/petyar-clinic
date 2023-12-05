@@ -1,27 +1,29 @@
 import React from 'react'
-import { ShowServiceCenters, MainHeader } from "@/components/index";
+import { ShowServiceCenters, MainHeader, Layout } from "@/components/index";
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
 
 interface fetchedDatasType {
-    centersData2: any
+  centersData2: any
 }
 
 export default function serviceCenters({ centersData2 }: fetchedDatasType) {
 
-    return (
-        <main className='mx-5 lg:mx-10'>
-            <MainHeader />
-            <ShowServiceCenters serviceCenters={centersData2} />
-        </main>
-    )
+  return (
+    <Layout>
+      <main className='mx-5 lg:mx-10'>
+        <MainHeader />
+        <ShowServiceCenters serviceCenters={centersData2} />
+      </main>
+    </Layout>
+  )
 }
 
 
 export async function getServerSideProps() {
 
-    const Get_serviceCentersDATA = gql`
+  const Get_serviceCentersDATA = gql`
     {
         serviceCenters {
             edges {
@@ -40,16 +42,16 @@ export async function getServerSideProps() {
     }
     `
 
-    const { data } = await client.query({
-        query: Get_serviceCentersDATA,
-        fetchPolicy: 'no-cache'
-    });
+  const { data } = await client.query({
+    query: Get_serviceCentersDATA,
+    fetchPolicy: 'no-cache'
+  });
 
 
-    return {
-        props: {
-            centersData2: data.serviceCenters.edges,
-        },
-    };
+  return {
+    props: {
+      centersData2: data.serviceCenters.edges,
+    },
+  };
 
 }

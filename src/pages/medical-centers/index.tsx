@@ -1,9 +1,7 @@
-import React from 'react'
-import { ShowMedicalCenters , MainHeader } from "@/components/index";
+import React, { Suspense } from 'react'
+import { ShowMedicalCenters, MainHeader,Layout } from "@/components/index";
 import client from '@/lib/apollo-client'
-import { gql} from '@apollo/client'
-
-
+import { gql } from '@apollo/client'
 
 interface fetchedDatasType {
   centersData: any
@@ -13,10 +11,12 @@ export default function MedicalCeters({ centersData }: fetchedDatasType) {
 
 
   return (
-    <main className='mx-5 lg:mx-10'>
-      <MainHeader/>
-      <ShowMedicalCenters medicalCenters={centersData} />
-    </main>
+    <Layout>
+      <main className='mx-5 lg:mx-10'>
+        <MainHeader />
+        <ShowMedicalCenters medicalCenters={centersData} />
+      </main>
+    </Layout>
   )
 }
 
@@ -47,7 +47,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      centersData : data.medicalCenters.nodes,
+      centersData: data.medicalCenters.nodes,
     },
   };
 
